@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text" default="0" label="COM_FREESTROKE_FORM_LBL_MEET_ID"
+			readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="name" type="text" size="40" class="inputbox"
+			label="COM_FREESTROKE_FORM_LBL_MEET_NAME" description="COM_FREESTROKE_FORM_DESC_MEET_NAME"
+			required="true" filter="safehtml" />
+
+		<field name="poolname" type="text" size="40" class="inputbox"
+			label="COM_FREESTROKE_FORM_LBL_MEET_POOLNAME" description="COM_FREESTROKE_FORM_DESC_MEET_POOLNAME"
+			filter="safehtml" />
+
+		<field name="place" type="text" size="40" class="inputbox"
+			label="COM_FREESTROKE_FORM_LBL_MEET_PLACE" description="COM_FREESTROKE_FORM_DESC_MEET_PLACE"
+			filter="safehtml" />
+
+		<field name="mindate" type="calendar" class="inputbox" required="true"
+			default="0000-00-00" label="COM_FREESTROKE_FORM_LBL_MEET_MINDATE"
+			description="COM_FREESTROKE_FORM_DESC_MEET_MINDATE" filter="safehtml" />
+
+		<field name="maxdate" type="calendar" class="inputbox" default="0000-00-00"
+			label="COM_FREESTROKE_FORM_LBL_MEET_MAXDATE" description="COM_FREESTROKE_FORM_DESC_MEET_MAXDATE"
+			filter="safehtml" />
+
+		<field name="deadline" type="calendar" class="inputbox" default="0000-00-00"
+			label="COM_FREESTROKE_FORM_LBL_MEET_DEADLINE" description="COM_FREESTROKE_FORM_DESC_MEET_DEADLINE"
+			filter="safehtml" />
+
+		<field name="course" type="radio" default="0" label="COM_FREESTROKE_FORM_LBL_MEET_COURSE" description="COM_FREESTROKE_FORM_DESC_MEET_COURSE">
+			<option value="2">25 meter</option>
+			<option value="1">50 meter</option>
+		</field>
+
+		<field name="created_by" type="createdby" default=""
+			label="COM_FREESTROKE_FORM_LBL_MEET_CREATED_BY" description="COM_FREESTROKE_FORM_DESC_MEET_CREATED_BY" />
+
+		<field name="filter_active" type="list" onchange="this.form.submit();">
+			<option value="">COM_FREESTROKE_MEMBERS_ACTIVE_FILTER</option>
+			<option value="0">COM_FREESTROKE_ACTIVE_FALSE</option>
+			<option value="1">COM_FREESTROKE_ACTIVE_TRUE</option>
+		</field>
+	</fieldset>
+
+</form>

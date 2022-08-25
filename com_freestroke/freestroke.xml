@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+	<name>Freestroke</name>
+	<creationDate>2016-08-21</creationDate>
+	<copyright>Copyright (C) 2016. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>Onno Minderaa</author>
+	<authorEmail>ominderaa@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<version>2.3.0</version>
+	<description>FreeStroke voor Joomla!</description>
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">/sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>freestroke.php</filename>
+		<filename>router.php</filename>
+		<folder>assets</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+		<folder>logic</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+	<languages folder="site">
+		<language tag="nl-NL">language/nl-NL.com_freestroke.ini</language>
+	</languages>
+	<administration>
+		<menu img="components/com_freestroke/assets/images/s_com_freestroke.png">COM_FREESTROKE</menu>
+		<submenu>
+			<menu link="option=com_freestroke&amp;view=members" view="members" img="components/com_freestroke/assets/images/s_members.png" 
+				alt="Freestroke/Members">COM_FREESTROKE_TITLE_MEMBERS</menu>
+			<menu link="option=com_freestroke&amp;view=meets" view="meets" img="components/com_freestroke/assets/images/s_meets.png" 
+				alt="Freestroke/Meets">COM_FREESTROKE_TITLE_MEETS</menu>
+			<menu link="option=com_freestroke&amp;view=venues" view="venues" img="components/com_freestroke/assets/images/s_venue.png" 
+				alt="Freestroke/Venues">COM_FREESTROKE_TITLE_VENUES</menu>
+			<menu link="option=com_freestroke&amp;view=swimstyles" view="swimstyles" img="components/com_freestroke/assets/images/s_swimstyles.png"
+				alt="Freestroke/Venues">COM_FREESTROKE_TITLE_SWIMSTYLES</menu>
+		</submenu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>freestroke.php</filename>
+			<folder>assets</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="administrator">
+			<language tag="nl-NL">language/nl-NL.com_freestroke.ini</language>
+			<language tag="nl-NL">language/nl-NL.com_freestroke.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

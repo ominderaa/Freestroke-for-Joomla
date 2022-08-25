@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text" default="0" label="COM_FREESTROKE_FORM_LBL_MEET_ID"
+			readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="name" type="text" size="40" class="input-xlarge"
+			label="COM_FREESTROKE_FORM_LBL_MEET_NAME" description="COM_FREESTROKE_FORM_DESC_MEET_NAME"
+			required="true" filter="safehtml" />
+
+		<field name="poolname" type="text" size="40" class="input-xlarge"
+			label="COM_FREESTROKE_FORM_LBL_MEET_POOLNAME" description="COM_FREESTROKE_FORM_DESC_MEET_POOLNAME"
+			filter="safehtml" />
+
+		<field name="place" type="text" size="40" class="input-xlarge"
+			label="COM_FREESTROKE_FORM_LBL_MEET_PLACE" description="COM_FREESTROKE_FORM_DESC_MEET_PLACE"
+			filter="safehtml" />
+
+		<field name="mindate" type="calendar" class="input-small" required="true"
+			default="0000-00-00" label="COM_FREESTROKE_FORM_LBL_MEET_MINDATE"
+			description="COM_FREESTROKE_FORM_DESC_MEET_MINDATE" filter="safehtml" />
+
+		<field name="maxdate" type="calendar" class="input-small" default="0000-00-00"
+			label="COM_FREESTROKE_FORM_LBL_MEET_MAXDATE" description="COM_FREESTROKE_FORM_DESC_MEET_MAXDATE"
+			filter="safehtml" />
+
+		<field name="teamlead" type="text" size="40" class="input-xlarge"
+			label="COM_FREESTROKE_FORM_LBL_MEET_TEAMLEAD" description="COM_FREESTROKE_FORM_DESC_MEET_TEAMLEAD"
+			filter="safehtml" />
+
+	</fieldset>
+
+</form>

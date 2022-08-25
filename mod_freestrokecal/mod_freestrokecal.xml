@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5.0"
+	client="site"
+	method="upgrade">
+	<name>Freestroke Meet Calendar</name>
+	<author>Onno Minderaa</author>
+	<version>2.1.0</version>
+	<description>A module to display a list of upcoming meets.</description>
+	<creationDate>2011-10-18</creationDate>
+	<files>
+		<filename>mod_freestrokecal.xml</filename>
+		<filename module="mod_freestrokecal">mod_freestrokecal.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_freestrokecal.ini</language>
+		<language tag="nl-NL">language/nl-NL.mod_freestrokecal.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="maxitems"
+					type="text"
+					default="5"
+					label="MOD_FREESTROKE_PARAMS_MAXMEETS_LBL"
+					description="MOD_FREESTROKE_PARAMS_MAXMEETS_DESC"/>
+				<field
+					name="maxnamelength"
+					type="text"
+					default="40"
+					label="MOD_FREESTROKE_PARAMS_MAXLENGTH_LBL"
+					description="MOD_FREESTROKE_PARAMS_MAXLENGTH_DESC"/>
+				<field
+					name="dateformat"
+					type="text"
+					default="l d.m.Y"
+					label="MOD_FREESTROKE_PARAMS_DATEFORMAT_LBL"
+					description="MOD_FREESTROKE_PARAMS_DATEFORMAT_DESC"/>
+				<field
+					name="linkmeet"
+					type="radio"
+					default="1"
+					label="MOD_FREESTROKE_PARAMS_LINKMEET_LBL"
+					description="MOD_FREESTROKE_PARAMS_LINKMEET_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field
+					name="eventlistintegration"
+					type="radio"
+					default="0"
+					label="MOD_FREESTROKE_PARAMS_EVENTLIST_LBL"
+					description="MOD_FREESTROKE_PARAMS_EVENTLIST_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>				
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					default=""
+					label="MOD_FREESTROKE_PARAMS_CLASSSUFFIX_LBL"
+					description="MOD_FREESTROKE_PARAMS_CLASSSUFFIX_DESC"/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

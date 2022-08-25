@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text" default="0" label="COM_FREESTROKE_FORM_LBL_CLUB_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="name" type="text" size="40" class="inputbox" label="COM_FREESTROKE_FORM_LBL_CLUB_NAME" description="COM_FREESTROKE_FORM_DESC_CLUB_NAME"
+			required="true" filter="safehtml" />
+
+		<field name="associationcode" type="text" size="40" class="inputbox" label="COM_FREESTROKE_FORM_LBL_CLUB_CODE" description="COM_FREESTROKE_FORM_DESC_CLUB_CODE"
+			required="true" filter="safehtml" />
+
+		<field name="changed" type="text" size="40" class="inputbox" label="COM_FREESTROKE_FORM_LBL_CLUB_CHANGED" description="COM_FREESTROKE_FORM_DESC_CLUB_CHANGED"
+			default="0000-00-00 00:00:00" filter="safehtml" />
+
+		<field name="shortname" type="text" size="40" class="inputbox" label="COM_FREESTROKE_FORM_LBL_CLUB_SHORTNAME" description="COM_FREESTROKE_FORM_DESC_CLUB_SHORTNAME"
+			filter="safehtml" />
+
+		<field name="created_by" type="createdby" default="" label="COM_FREESTROKE_FORM_LBL_CLUB_CREATED_BY" description="COM_FREESTROKE_FORM_DESC_CLUB_CREATED_BY" />
+
+	</fieldset>
+
+</form>

@@ -1,0 +1,275 @@
+/**
+ * @section clear
+ *
+ * clearing the float containers
+ */
+div#freestroke {
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+div.fs-sessionmessage {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	line-height: 2em;
+	border-top: 2px solid #8080FF;
+	border-bottom: 2px solid #8080FF;
+	background-color: #C0C0FF;
+}
+
+@media screen and (max-width: 479px) {
+    .fs-sm-hidden {
+		display:none;
+        width:0;
+        height:0;
+        opacity:0;
+        visibility: collapse;
+	}
+	
+	div.fs-sm-fullwidth {
+		width: 100%;
+	}
+	div.fs-lg-halfwidth {
+	}
+}
+
+@media screen and (min-width: 480px)  and (max-width: 767px) {
+    .fs-md-hidden {
+		display:none;
+        width:0;
+        height:0;
+        opacity:0;
+        visibility: collapse;
+    }
+	
+	div.fs-sm-fullwidth {
+	}
+
+	div.fs-lg-halfwidth {
+		width: 48%;
+		display: inline;
+		border: 1px solid #404040;
+	}
+}
+
+@media screen and (min-width: 768px) {
+    .fs-lg-hidden {
+		display:none;
+        width:0;
+        height:0;
+        opacity:0;
+        visibility: collapse;
+    }
+	
+	div.fs-sm-fullwidth {
+	}
+	
+	div.fs-lg-halfwidth {
+		min-width: 250px;
+		width: 48%;
+		display: table-cell;
+	}
+}
+
+@media screen and (max-width: 479px) {
+    .fs-sm-visible {
+        display: block;
+    }
+	.fs-itemcontainer {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .fs-md-visible {
+        display: block;
+    }
+	.fs-itemcontainer {
+		width: 48%;
+	}
+}
+
+@media (min-width: 768px) {
+    .fs-lg-visible {
+        display: block;
+    }
+	.fs-itemcontainer {
+		width: 48%;
+	}
+}
+
+@media print {
+    .fs-lg-visible {
+        display: block;
+    }
+	.fs-itemcontainer {
+		width: 48%;
+		font-size: 0.8em; 
+		line-height: 1em;
+	}
+}
+
+/* responsive layout via divs */
+.fs-itemtable {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.fs-itemcontainer {
+	vertical-align: top;
+	padding: 0px 5px 12px 5px;
+}
+
+.fs-itemheader {
+	font-weight: bold;
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.fs-itemcontent {
+	width: 100%;
+	margin: 0;
+	margin-left: 1em;
+	padding: 0;
+}
+
+td#freestroke-toolbar {
+	width: 			105px;	
+	right:			5px;
+}
+
+.fs-btn {
+	width: 75px;
+}
+
+div#freestroke table.table th {
+	background-color: #EFEFEF; 
+}
+
+/* table with grid lines */
+div#freestroke table.fixedgrid
+{ 
+	margin: 1em 1px; 
+	width: 99%; 
+	font-size: 1em; 
+	border-collapse: collapse; 
+	border: 1px solid #E5E5E5; 
+}
+
+div#freestroke table.fixedgrid th
+{ 
+	background-color: #EFEFEF; 
+	color: #000; 
+	font-weight: bold; 
+	padding: 0.4em; 
+	text-align: left; 
+	border-bottom: 1px solid #e5e5e5; 
+	border-right: 1px solid #E5E5E5;  
+}
+
+div#freestroke table.fixedgrid th img
+{ 
+	margin: 0 0 5px 5px; 
+	vertical-align: midle; 
+	border: none; 
+}
+
+span.fs-label {
+	font-size: 1em;
+	font-weight:bold;
+}
+
+/* table without grid lines */
+div#freestroke table.fixedlist
+{ 
+	margin: 1em 1px; 
+	width: 99%; 
+	font-size: 1em; 
+	border-collapse: collapse; 
+}
+
+div#freestroke table.fixedlist th
+{ 
+	background-color: #EFEFEF; 
+	color: #000; 
+	font-weight: bold; 
+	text-align: left; 
+	border-bottom: 1px solid #e5e5e5; 
+}
+
+div#freestroke table.fixedlist td
+{ 
+	vertical-align: top; 
+}
+
+div#freestroke table.fixedlist td.fs-label {
+	font-size: 1em;
+	font-weight:bold;
+	border-bottom: 1px solid #ebebeb;
+}
+
+/* Dates */
+@media screen {
+div#freestroke td.agenda-date { width: 84px; }
+div#freestroke div.agenda-date {
+	width: 68px;
+	float: left;
+	text-align: center;
+}
+div#freestroke .agenda-date .dayofmonth {
+	width: 100%;
+	font-size: 24px;
+	text-align: center;
+}
+div#freestroke .agenda-date .shortdate {
+	width: 100%;
+	text-align: center;
+}
+div#freestroke .agenda-date .dayofweek {
+	width: 100%;
+	text-align: center;
+}
+div#freestroke .agenda-date .until-date {
+	width: 100%;
+}
+
+/* Times */
+div#freestroke .agenda-time { width: 140px; } 
+}
+
+@media print {
+	div#freestroke td.agenda-date { 
+		width: 84px; 
+	}
+	div#freestroke div.agenda-date {
+		width: 68px;
+		float: left;
+		text-align: center;
+		font-size: 10px;
+	}
+	div#freestroke .agenda-date .dayofmonth {
+		width: 100%;
+		font-size: 14px;
+		text-align: center;
+	}
+	div#freestroke .agenda-date .shortdate {
+		width: 100%;
+		text-align: center;
+	}
+	div#freestroke .agenda-date .dayofweek {
+		width: 100%;
+		text-align: center;
+	}
+	div#freestroke .agenda-date .until-date {
+		width: 100%;
+	}
+	
+	/* Times */
+	div#freestroke .agenda-time { width: 140px; } 
+}
+

@@ -1,0 +1,109 @@
+<?xml version="1.0" ?>
+<project name="Freestroke Joomla extension" basedir="." default="package">
+
+	<property name="component" value="com_freestroke" />
+	<property name="module" value="mod_freestrokecal" />
+	<property name="dist" value="dist" />
+	<property name="site" value="C:/www/dvstest" />
+	<property name="version" value="2.3.0" />
+
+	<target name="package" depends="package-component,package-module" />
+	<target name="copy-all" depends="copy-component,copy-module" />
+	<target name="install" depends="install-component,install-module" />
+
+	<!-- package component -->
+	<target name="package-component" description="Builds the Freestroke component package" >
+		<!-- Cleanup build area -->
+		<delete file="${dist}/${component}-${version}.zip" />
+
+		<!-- Add the module -->
+		<zip destfile="${dist}/${component}-${version}.zip" basedir="${component}">
+		</zip>
+	</target>
+
+	<target name="package-module" description="Builds the Freestroke calendar module package" >
+
+		<!-- Cleanup build area -->
+		<delete file="${dist}/${module}-${version}.zip" />
+
+		<!-- Add the module -->
+		<zip destfile="${dist}/${module}-${version}.zip" basedir="${module}">
+		</zip>
+	</target>
+
+	<!-- copy component from site -->
+	<target name="copy-component" description="Copies from test site back to source">
+		<copy todir="${component}/administrator" verbose="true">
+			<fileset dir="${site}/administrator/components/${component}">
+				<exclude name="**/freestroke.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${component}/site" verbose="true">
+			<fileset dir="${site}/components/${component}">
+				<exclude name="**/freestroke.xml" />
+			</fileset>
+		</copy>
+		<copy todir="${component}/administrator/language" verbose="true">
+			<fileset dir="${site}/administrator/language/nl-NL">
+				<include name="**/*com_freestroke.*" />
+			</fileset>
+			<fileset dir="${site}/administrator/language/en-GB">
+				<include name="**/*com_freestroke.*" />
+			</fileset>
+		</copy>
+		<copy todir="${component}/site/language" verbose="true">
+			<fileset dir="${site}/language/nl-NL">
+				<include name="**/*com_freestroke.*" />
+			</fileset>
+			<fileset dir="${site}/language/en-GB">
+				<include name="**/*com_freestroke.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<!-- copy component from site -->
+	<target name="install-component" description="Copies from source to test site">
+		<copy todir="${site}/administrator/components/${component}" verbose="true">
+			<fileset dir="${component}/administrator">
+			</fileset>
+		</copy>
+		<copy todir="${site}/components/${component}" verbose="true">
+			<fileset dir="${component}/site">
+			</fileset>
+		</copy>
+		<copy todir="${site}/administrator/language/nl-NL" verbose="true">
+			<fileset dir="${component}/administrator/language">
+				<include name="**/nl-NL*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${site}/administrator/language/en-GB" verbose="true">
+			<fileset dir="${component}/administrator/language">
+				<include name="**/en-GB*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${site}/language/nl-NL" verbose="true">
+			<fileset dir="${component}/site/language">
+				<include name="**/nl-NL*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${site}/language/en-GB" verbose="true">
+			<fileset dir="${component}/site/language">
+				<include name="**/gb-GB*.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	
+	<target name="copy-module" description="Copies from test site back to source">
+		<copy todir="${module}" verbose="true">
+			<fileset dir="${site}/modules/${module}" />
+		</copy>
+	</target>
+
+	<target name="install-module" description="Copies module from source to site">
+		<copy todir="${site}/modules/${module}" verbose="true">
+			<fileset dir="${module}" />
+		</copy>
+	</target>
+
+</project>

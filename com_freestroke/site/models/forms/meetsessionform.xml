@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="hidden" default="0" hidden="true" label="COM_FREESTROKE_FORM_LBL_MEETSESSION_ID"
+			readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="name" type="text" size="80" class="input-xlarge" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEET_NAME" description="COM_FREESTROKE_FORM_DESC_MEETSESSION_NAME"
+			required="true" filter="safehtml" />
+
+		<field name="startdate" type="calendar" class="input-small"  labelclass="control-label"
+			required="true" format="%Y-%m-%d"
+			default="0000-00-00" label="COM_FREESTROKE_FORM_LBL_MEETSESSION_DATE"
+			description="COM_FREESTROKE_FORM_DESC_MEETSESSION_DATE" filter="safehtml" />
+
+		<field name="starttime" class="input-mini"  labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_STARTTIME" description="COM_FREESTROKE_FORM_DESC_MEETSESSION_STARTTIME"
+			type="text"
+			size="5"
+			required="true" />
+		
+		<field name="warmupfrom"  class="input-mini" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_WARMUPFROM" description="COM_FREESTROKE_FORM_DESC_MEETSESSION_WARMUPFROM"
+			type="text"
+			size="5"
+			required="false" />
+		
+		<field name="warmupuntil"  class="input-mini" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_WARMUPUNTIL" description="COM_FREESTROKE_FORM_DESC_MEETSESSION_WARMUPUNTIL"
+			type="text"
+			size="5"
+			required="false"/>
+
+		<field name="officialmeeting"  class="input-mini" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_OFFICIALMEETING" 
+			description="COM_FREESTROKE_FORM_DESC_MEETSESSION_OFFICIALMEETING"
+			type="text"
+			size="5"
+			required="false"/>
+
+		<field name="teamleadermeeting"  class="input-mini" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_TEAMLEADERMEETING" 
+			description="COM_FREESTROKE_FORM_DESC_MEETSESSION_TEAMLEADERMEETING"
+			type="text"
+			size="5"
+			required="false"/>
+		
+		<field name="teamlead"  type="textarea" class="input-xxlarge" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_TEAMLEAD" description="COM_FREESTROKE_FORM_DESC_MEETSESSION_TEAMLEAD"
+			rows="2" cols="80" 
+			required="false"/>
+		
+		<field name="cancelling"  type="textarea" class="input-xxlarge" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_CANCELLING" description="COM_FREESTROKE_FORM_DESC_MEETSESSION_CANCELLING"
+			rows="1" cols="80" 
+			required="false"/>
+		
+		<field name="judges" type="textarea" class="input-large" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_JUDGES" description="COM_FREESTROKE_FORM_DESC_MEETSESSION_JUDGES"
+		    rows="5" cols="40" />		
+
+		<field name="message" type="textarea"   class="input-xxlarge" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_MESSAGE" description="COM_FREESTROKE_FORM_DESC_MEETSESSION_MESSAGE"
+		    rows="1" cols="120" />		
+
+		<field name="transport" type="textarea"   class="input-xlarge" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_TRANSPORT" description="COM_FREESTROKE_FORM_DESC_MEETSESSION_TRANSPORT"
+		    rows="2" cols="30"  required="false"/>		
+
+		<field name="carpool" type="textarea"   class="input-large" labelclass="control-label"
+			label="COM_FREESTROKE_FORM_LBL_MEETSESSION_CARPOOL" description="COM_FREESTROKE_FORM_DESC_MEETSESSION_CARPOOL"
+		    rows="5" cols="40"  required="false"/>		
+
+	</fieldset>
+
+</form>

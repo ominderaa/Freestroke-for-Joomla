@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text" default="0" label="COM_FREESTROKE_FORM_LBL_MEMBER_ID"
+			readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="firstname" type="text" label="COM_FREESTROKE_FORM_LBL_MEMBER_FIRSTNAME"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_FIRSTNAME" required="true"
+			filter="raw" size="30" maxlength="30" />
+
+		<field name="lastname" type="text" label="COM_FREESTROKE_FORM_LBL_MEMBER_LASTNAME"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_LASTNAME" required="true"
+			filter="raw" size="60" maxlength="60" />
+
+		<field name="initials" type="text" label="COM_FREESTROKE_FORM_LBL_MEMBER_INITIALS"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_INITIALS" required="true"
+			filter="raw" size="10" maxlength="10" />
+
+		<field name="nameprefix" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_NAMEPREFIX" description="COM_FREESTROKE_FORM_DESC_MEMBER_NAMEPREFIX"
+			filter="raw" size="12" maxlength="12" />
+
+		<field name="place" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_WOONPLAATS" description="COM_FREESTROKE_FORM_DESC_MEMBER_WOONPLAATS"
+			required="true" filter="raw" size="60" maxlength="60" />
+
+		<field name="registrationid" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_REGISTRATIONID" description="COM_FREESTROKE_FORM_DESC_MEMBER_REGISTRATIONID"
+			filter="raw" size="30" maxlength="30" />
+
+		<field name="active" type="checkbox" label="COM_FREESTROKE_FORM_LBL_MEMBER_ACTIVE"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_ACTIVE" required="true" value="1"
+			filter="raw" />
+
+	</fieldset>
+
+</form>

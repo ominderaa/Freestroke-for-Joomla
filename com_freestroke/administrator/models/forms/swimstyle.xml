@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="COM_FREESTROKE_FORM_LBL_SWIMSTYLE_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC"/>
+		<field name="code" type="text" label="COM_FREESTROKE_FORM_LBL_SWIMSTYLE_CODE" description="COM_FREESTROKE_FORM_DESC_SWIMSTYLE_CODE" filter="safehtml"
+			size="10" maxlength="10"/>
+		<field name="distance" type="text" label="COM_FREESTROKE_FORM_LBL_SWIMSTYLE_DISTANCE" description="COM_FREESTROKE_FORM_DESC_SWIMSTYLE_DISTANCE"
+			required="true" filter="uint" size="5"/>
+		<field name="name" type="text" label="COM_FREESTROKE_FORM_LBL_SWIMSTYLE_NAME" description="COM_FREESTROKE_FORM_DESC_SWIMSTYLE_NAME" required="true"
+			filter="safehtml" size="40" maxlength="50"/>
+		<field name="relaycount" type="text" label="COM_FREESTROKE_FORM_LBL_SWIMSTYLE_RELAYCOUNT" description="COM_FREESTROKE_FORM_DESC_SWIMSTYLE_RELAYCOUNT"
+			default="1" required="true" filter="uint" size="3" maxlength="3"/>
+		<field name="strokecode" type="list" label="COM_FREESTROKE_FORM_LBL_SWIMSTYLE_STROKE" description="COM_FREESTROKE_FORM_DESC_SWIMSTYLE_STROKE" default="FREE"
+			required="true" multiple="false">
+			<option value="X">COM_FREESTROKE_STROKE_X</option>
+			<option value="FREE">COM_FREESTROKE_STROKE_FREE</option>
+			<option value="BACK">COM_FREESTROKE_STROKE_BACK</option>
+			<option value="FLY">COM_FREESTROKE_STROKE_FLY</option>
+			<option value="MEDLEY">COM_FREESTROKE_STROKE_MEDLEY</option>
+		</field>
+		<field name="filter_strokecode" type="list" onchange="this.form.submit();">
+			<option value="">COM_FREESTROKE_SWIMSTYLES_STROKE_FILTER</option>
+			<option value="X">COM_FREESTROKE_STROKE_X</option>
+			<option value="FREE">COM_FREESTROKE_STROKE_FREE</option>
+			<option value="BACK">COM_FREESTROKE_STROKE_BACK</option>
+			<option value="FLY">COM_FREESTROKE_STROKE_FLY</option>
+			<option value="MEDLEY">COM_FREESTROKE_STROKE_MEDLEY</option>
+		</field>
+	</fieldset>
+</form>

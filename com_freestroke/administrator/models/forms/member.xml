@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text" default="0" label="COM_FREESTROKE_FORM_LBL_MEMBER_ID"
+			readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="firstname" type="text" label="COM_FREESTROKE_FORM_LBL_MEMBER_FIRSTNAME"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_FIRSTNAME" required="true"
+			filter="raw" size="30" maxlength="30" />
+
+		<field name="lastname" type="text" label="COM_FREESTROKE_FORM_LBL_MEMBER_LASTNAME"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_LASTNAME" required="true"
+			filter="raw" size="60" maxlength="60" />
+
+		<field name="nameprefix" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_NAMEPREFIX" description="COM_FREESTROKE_FORM_DESC_MEMBER_NAMEPREFIX"
+			filter="raw" size="12" maxlength="12" />
+
+		<field name="initials" type="text" label="COM_FREESTROKE_FORM_LBL_MEMBER_INITIALS"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_INITIALS"
+			filter="raw" size="10" maxlength="10" />
+
+		<field name="birthdate" type="calendar" class="inputbox" required="true"
+			default="0000-00-00" label="COM_FREESTROKE_FORM_LBL_MEMBER_BIRTHDATE"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_BIRTHDATE" filter="safehtml" />
+
+		<field name="gender" type="radio" default="M" label="COM_FREESTROKE_FORM_LBL_MEMBER_GENDER" 
+				description="COM_FREESTROKE_FORM_DESC_MEMBER_GENDER">
+			<option value="M">COM_FREESTROKE_GENDER_M</option>
+			<option value="F">COM_FREESTROKE_GENDER_F</option>
+		</field>
+			
+		<field name="street" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_STREET" description="COM_FREESTROKE_FORM_DESC_MEMBER_STREET"
+			required="false" filter="raw" size="80" maxlength="80" />
+
+		<field name="zip" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_ZIP" description="COM_FREESTROKE_FORM_DESC_MEMBER_ZIP"
+			required="false" filter="raw" size="60" maxlength="20" />
+
+		<field name="place" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_PLACE" description="COM_FREESTROKE_FORM_DESC_MEMBER_PLACE"
+			required="false" filter="raw" size="50" maxlength="50" />
+
+		<field name="phonenumber" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_PHONENUMBER" description="COM_FREESTROKE_FORM_DESC_MEMBER_PHONENUMBER"
+			required="false" filter="raw" size="20" maxlength="20" />
+
+		<field name="mobile" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_MOBILE" description="COM_FREESTROKE_FORM_DESC_MEMBER_MOBILE"
+			required="false" filter="raw" size="20" maxlength="20" />
+
+		<field name="email" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_EMAIL" description="COM_FREESTROKE_FORM_DESC_MEMBER_EMAIL"
+			required="false" filter="raw" size="60" maxlength="60" />
+
+		<field name="registrationid" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_REGISTRATIONID" description="COM_FREESTROKE_FORM_DESC_MEMBER_REGISTRATIONID"
+			required="false" filter="raw" size="30" maxlength="30" />
+
+		<field name="regvaliddate" type="calendar" class="inputbox" 
+			default="0000-00-00" label="COM_FREESTROKE_FORM_LBL_MEMBER_REGVALIDDATE"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_REGVALIDDATE" filter="safehtml" />
+
+		<field name="entrydate" type="calendar" class="inputbox"
+			default="0000-00-00" label="COM_FREESTROKE_FORM_LBL_MEMBER_ENTRYDATE"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_ENTRYDATE" filter="safehtml" />
+
+		<field name="exitdate" type="calendar" class="inputbox" required="false"
+			default="0000-00-00" label="COM_FREESTROKE_FORM_LBL_MEMBER_EXITDATE"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_EXITDATE" filter="safehtml" />
+
+		<field name="isactive" type="radio" label="COM_FREESTROKE_FORM_LBL_MEMBER_ACTIVE"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_ACTIVE" required="true" value="1">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="isjudge" type="radio" label="COM_FREESTROKE_FORM_LBL_MEMBER_JUDGE"
+			description="COM_FREESTROKE_FORM_DESC_MEMBER_JUDGE" required="true" value="0" filter="raw">
+			<option value="1">JYES</option>
+			<option value="0">JNO</option>
+		</field>
+
+		<field name="competence" type="text"
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_JUDGECOMPETENCE" description="COM_FREESTROKE_FORM_DESC_MEMBER_JUDGECOMPETENCE"
+			required="false" filter="raw" size="8" maxlength="20" />
+
+		<field name="created_by" type="createdby" default=""
+			label="COM_FREESTROKE_FORM_LBL_MEMBER_CREATED_BY" description="COM_FREESTROKE_FORM_DESC_MEMBER_CREATED_BY" />
+
+	</fieldset>
+
+</form>

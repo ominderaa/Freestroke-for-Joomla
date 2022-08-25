@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+		<field name="id" type="text" default="0" label="COM_FREESTROKE_FORM_LBL_VENUE_ID"
+			readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" />
+
+		<field name="created_by" type="createdby" default=""
+			label="COM_FREESTROKE_FORM_LBL_CREATED_BY" description="COM_FREESTROKE_FORM_DESC_CREATED_BY" />
+
+		<field name="name" type="text" label="COM_FREESTROKE_FORM_LBL_VENUE_NAME"
+			description="COM_FREESTROKE_FORM_DESC_VENUE_NAME" required="true" filter="safehtml"
+			maxlength="160" />
+
+		<field name="address" type="text" label="COM_FREESTROKE_FORM_LBL_VENUE_ADDRESS"
+			description="COM_FREESTROKE_FORM_DESC_VENUE_ADDRESS" filter="safehtml"
+			maxlength="160" />
+
+		<field name="place" type="text" label="COM_FREESTROKE_FORM_LBL_VENUE_PLACE"
+			description="COM_FREESTROKE_FORM_DESC_VENUE_PLACE" filter="safehtml"
+			maxlength="160" />
+
+		<field name="course" type="list" label="COM_FREESTROKE_FORM_LBL_VENUE_COURSE"
+			description="COM_FREESTROKE_FORM_DESC_VENUE_COURSE" default="SCM" required="true"
+			multiple="false">
+			<option value="SCM">25 meter</option>
+			<option value="LCM">50 meter</option>
+			<option value="OPEN">Open water</option>
+		</field>
+
+		<field name="website" type="text" label="COM_FREESTROKE_FORM_LBL_VENUE_WEBSITE"
+			description="COM_FREESTROKE_FORM_DESC_VENUE_WEBSITE" filter="url" maxlength="256" />
+
+	</fieldset>
+
+</form>

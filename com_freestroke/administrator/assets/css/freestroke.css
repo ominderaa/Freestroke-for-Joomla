@@ -1,0 +1,69 @@
+.fs-button {
+	border: 1px solid #dbdbdb;
+	text-align: center;
+	padding: 3px;
+	background-color: #ffffff;
+}
+
+dl.fs-dl {
+	margin: 0;
+	padding: 0;
+	clear: both;
+	overflow: hidden;
+}
+
+dl.fs-dl dt {
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: 28%;
+	list-style-type: bullet;
+	line-height: 3;
+}
+
+dl.fs-dl dd {
+	margin: 0;
+	padding: 0;
+	float: right;
+	width: 72%;
+	line-height: 3;
+}
+
+div.modal-sm {
+	width: 40% !important;
+	left:70%" !important;	
+}
+
+.fs-button:hover {
+	background-color: #E8F6FE;
+}
+
+.icon-48-members {
+	background-image: url(../images/l_members.png);
+	padding-left: 60px !important;
+}
+
+.icon-48-member {
+	background-image: url(../images/l_members.png);
+	padding-left: 60px !important;
+}
+
+.icon-48-clubs {
+	background-image: url(../images/l_clubs.png);
+	padding-left: 60px !important;
+}
+
+.icon-48-club {
+	background-image: url(../images/l_club.png);
+	padding-left: 60px !important;
+}
+
+.icon-48-meets {
+	background-image: url(../images/l_meets.png);
+	padding-left: 60px !important;
+}
+
+.icon-48-meet {
+	background-image: url(../images/l_meets.png);
+	padding-left: 60px !important;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout
+		title="COM_FREESTROKE_TITLE_LIST_VIEW_MEETSRESULTS"
+		option="View">
+		<message>
+                        <![CDATA[COM_FREESTROKE_TITLE_LIST_VIEW_MEETSRESULTS_DESC]]>
+		</message>
+	</layout>
+	<fields name="params">
+		<fieldset name="request">
+			<field
+				name="introtext"
+				type="editor"
+				label="COM_FREESTROKE_INTROTEXT_LABEL"
+				description="COM_FREESTROKE_INTROTEXT_DESC"
+				filter="raw">
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

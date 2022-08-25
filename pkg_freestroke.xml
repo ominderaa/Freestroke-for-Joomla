@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="1.6">
+	<name>Freestroke for Jooma! Package</name>
+	<creationDate>2014-01-28</creationDate>
+	<copyright>Copyright (C) 2014. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<author>O.Minderaa</author>
+	<authorEmail>ominderaa@gmail.com</authorEmail>
+	<packagename>freestroke</packagename>
+	<version>1.1.0</version>
+	<packager>O.Minderaa</packager>
+	<description>Freestroke for Jooma! package</description>
+	<files folder="packages">
+		<file type="component" id="freestroke">com_freestroke.zip</file>
+		<file type="module" id="freestrokecal" client="site">mod_freestrokecal.zip</file>
+	</files>
+</extension>
