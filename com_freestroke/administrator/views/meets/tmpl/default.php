@@ -41,7 +41,7 @@ $saveOrder	= $listOrder == 'a.ordering';
 					</label>
 					<input type="text" name="filter_search" id="filter_search"
 						   placeholder="<?php echo JText::_('JSEARCH_FILTER'); ?>"
-						   value="<?php echo $this->escape($this->state->get('filter.search')); ?>"
+						   value="<?php if($this->state->get('filter.search')!=null) {echo $this->escape($this->state->get('filter.search'));} ?>"
 						   title="<?php echo JText::_('JSEARCH_FILTER'); ?>"/>
 				</div>
 				<div class="btn-group pull-left">
@@ -127,7 +127,7 @@ $saveOrder	= $listOrder == 'a.ordering';
 							<?php echo $item->place; ?>
 						</td>
 						<td>
-							<?php echo strftime( '%d-%m-%Y', strtotime($item->mindate) ); ?>
+							<?php echo date_format(date_create($item->mindate),  'd-m-Y'); ?>
 							</td>
 			                <?php if (isset($this->items[0]->id)) { ?>
 						<td class="center">

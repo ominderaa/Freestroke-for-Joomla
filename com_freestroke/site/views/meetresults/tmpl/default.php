@@ -36,7 +36,7 @@ if (! $isModal) {
 <table style="width:100%">
 <tr>
 	<td style="padding-bottom:0;text-align:left"><?php echo $this->item->poolname . ', ' . $this->item->place; ?></td>
-	<td style="padding-bottom:0;text-align:right"><?php echo strftime ( '%d-%m-%Y', strtotime ( $this->item->mindate ) ); ?></td>
+	<td style="padding-bottom:0;text-align:right"><?php echo date_format(date_create( $this->item->mindate), 'd-m-Y' ); ?></td>
 </tr>
 </table>
 

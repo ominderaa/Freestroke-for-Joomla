@@ -153,8 +153,8 @@ class FreestrokeControllerMembers extends JControllerAdmin {
 		{
 			case 'birthdate':
 				if ($value != '') {
-					$date = strtotime($value);
-					$field = strftime('%Y-%m-%d',$date);
+					$date = date_create($value);
+					$field = date_format($date, 'Y-m-d');
 				}
 				else {
 					$field = null;

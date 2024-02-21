@@ -84,11 +84,11 @@ abstract class FreestrokeConversionHelper {
 
 	public static function format($format, $value) {
 		setlocale(LC_TIME, 'NL_nl');
-		return strftime( $format, strtotime($value) );
+		return date_format( date_create($value), $format );
 	}
 	
 	public static function formatDate($value) {
-		return strftime( '%d-%m-%Y', strtotime($value) );
+		return date_format( date_create($value), 'd-m-Y' );
 	}
 }
 

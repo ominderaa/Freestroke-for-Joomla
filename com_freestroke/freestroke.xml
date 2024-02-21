@@ -7,7 +7,7 @@
 	<author>Onno Minderaa</author>
 	<authorEmail>ominderaa@gmail.com</authorEmail>
 	<authorUrl></authorUrl>
-	<version>2.3.0</version>
+	<version>4.0.0</version>
 	<description>FreeStroke voor Joomla!</description>
 	<install>
 		<sql>

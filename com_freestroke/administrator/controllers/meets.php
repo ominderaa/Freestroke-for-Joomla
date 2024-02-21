@@ -38,7 +38,7 @@ class FreestrokeControllerMeets extends JControllerAdmin {
 	 */
 	function csvimport() {
 		JTable::addIncludePath ( JPATH_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_freestroke' . DIRECTORY_SEPARATOR . 'tables' );
-		$meet = & JTable::getInstance ( 'meet', 'FreestrokeTable', null );
+		$meet = JTable::getInstance ( 'meet', 'FreestrokeTable', null );
 		$meet_fields = get_object_vars ( $meet );
 		$user = JFactory::getUser();
 		
@@ -87,7 +87,8 @@ class FreestrokeControllerMeets extends JControllerAdmin {
 					$r = array ();
 					// only extract columns with validated header, from previous step.
 					foreach ( $meetfieldnames as $k => $v ) {
-						$r [] = $this->formatcsvfield ( $v, $data [$k] );
+						if(array_key_exists($k, $data ))
+							$r [] = $this->formatcsvfield ( $v, $data [$k] );
 					}
 					$r[] = $user->id; // set created_by
 					$r[] = 'N';	// set meetstate default value
@@ -96,12 +97,12 @@ class FreestrokeControllerMeets extends JControllerAdmin {
 				$row ++;
 			}
 			fclose ( $handle );
-			$msg .= "<p>total records found: " . count ( $records ) . "<br /></p>\n";
+			$msg .= "<p>total records found: " . count ( $meetrecords ) . "<br /></p>\n";
 			
 			// database update
 			if (count ( $meetrecords )) {
 				$model = $this->getModel ( 'meets' );
-				$resultmeets = $model->import ( $meetfieldnames, $meetrecords, $replace );
+				$resultmeets = $model->import ( $meetfieldnames, $meetrecords, false );
 				$msg .= "<p>total meets added records: " . $resultmeets ['added'] . "<br /></p>\n";
 				$msg .= "<p>total meets updated records: " . $resultmeets ['updated'] . "<br /></p>\n";
 				
@@ -127,16 +128,16 @@ class FreestrokeControllerMeets extends JControllerAdmin {
 			case 'startdate' :
 			case 'deadline' :
 				if ($value != '') {
-					$date = strtotime ( $value );
-					$field = strftime ( '%Y-%m-%d', $date );
+					$date = date_create($value);
+					$field = date_format( $date, 'Y-m-d' );
 				} else {
 					$field = null;
 				}
 				break;
 			case 'starttime' :
 				if ($value != '') {
-					$time = strtotime ( $value );
-					$field = strftime ( '%H:%M', $time );
+					$time = date_create($value);
+					$field = date_format( $time, 'H:i' );
 				} else {
 					$field = null;
 				}

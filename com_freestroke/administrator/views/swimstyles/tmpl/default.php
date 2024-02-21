@@ -41,7 +41,7 @@ $saveOrder	= $listOrder == 'a.ordering';
 					</label>
 					<input type="text" name="filter_search" id="filter_search"
 						   placeholder="<?php echo JText::_('JSEARCH_FILTER'); ?>"
-						   value="<?php echo $this->escape($this->state->get('filter.search')); ?>"
+						   value="<?php if($this->state->get('filter.search')!=null) {echo $this->escape($this->state->get('filter.search'));} ?>"
 						   title="<?php echo JText::_('JSEARCH_FILTER'); ?>"/>
 				</div>
 					<div class="btn-group pull-left">
@@ -78,21 +78,20 @@ $saveOrder	= $listOrder == 'a.ordering';
 						</th>
 		
 						<th class='left'>
-						<?php echo JHtml::_('grid.sort',  'COM_FREESTROKE_SWIMSTYLES_CODE', 'a.code', $listDirn, $listOrder); ?>
+							<?php echo JHtml::_('grid.sort',  'COM_FREESTROKE_SWIMSTYLES_STROKE', 'a.stroke', $listDirn, $listOrder); ?>
 						</th>
 						<th class='left'>
-						<?php echo JHtml::_('grid.sort',  'COM_FREESTROKE_SWIMSTYLES_DISTANCE', 'a.distance', $listDirn, $listOrder); ?>
+							<?php echo JHtml::_('grid.sort',  'COM_FREESTROKE_SWIMSTYLES_NAME', 'a.name', $listDirn, $listOrder); ?>
 						</th>
 						<th class='left'>
-						<?php echo JHtml::_('grid.sort',  'COM_FREESTROKE_SWIMSTYLES_NAME', 'a.name', $listDirn, $listOrder); ?>
+							<?php echo JHtml::_('grid.sort',  'COM_FREESTROKE_SWIMSTYLES_DISTANCE', 'a.distance', $listDirn, $listOrder); ?>
 						</th>
 						<th class='left'>
-						<?php echo JHtml::_('grid.sort',  'COM_FREESTROKE_SWIMSTYLES_RELAYCOUNT', 'a.relaycount', $listDirn, $listOrder); ?>
+							<?php echo JHtml::_('grid.sort',  'COM_FREESTROKE_SWIMSTYLES_RELAYCOUNT', 'a.relaycount', $listDirn, $listOrder); ?>
 						</th>
 						<th class='left'>
-						<?php echo JHtml::_('grid.sort',  'COM_FREESTROKE_SWIMSTYLES_STROKE', 'a.stroke', $listDirn, $listOrder); ?>
+							<?php echo JHtml::_('grid.sort',  'COM_FREESTROKE_SWIMSTYLES_CODE', 'a.code', $listDirn, $listOrder); ?>
 						</th>
-		
 		                <?php if (isset($this->items[0]->id)) { ?>
 		                <th width="1%" class="nowrap">
 		                    <?php echo JHtml::_('grid.sort',  'JGRID_HEADING_ID', 'a.id', $listDirn, $listOrder); ?>
@@ -129,29 +128,34 @@ $saveOrder	= $listOrder == 'a.ordering';
 						</td>
 		
 						<td>
-						<?php if (isset($item->checked_out) && $item->checked_out) : ?>
-							<?php echo JHtml::_('jgrid.checkedout', $i, $item->editor, $item->checked_out_time, 'swimstyles.', $canCheckin); ?>
-						<?php endif; ?>
 						<?php if ($canEdit) : ?>
-							<a href="<?php echo JRoute::_('index.php?option=com_freestroke&task=swimstyle.edit&id='.(int) $item->id); ?>">
-							<?php echo $this->escape($item->code); ?></a>
-						<?php else : ?>
-							<?php echo $this->escape($item->code); ?>
-						<?php endif; ?>
+								<a href="<?php echo JRoute::_('index.php?option=com_freestroke&task=swimstyle.edit&id='.(int) $item->id); ?>">
+									<?php echo JText::_('COM_FREESTROKE_STROKE_'. $item->strokecode); ?>
+								</a>
+							<?php else : ?>
+								<?php echo JText::_('COM_FREESTROKE_STROKE_'. $item->strokecode); ?>
+							<?php endif; ?>
+						</td>
+						<td>
+							<?php if ($canEdit) : ?>
+								<a href="<?php echo JRoute::_('index.php?option=com_freestroke&task=swimstyle.edit&id='.(int) $item->id); ?>">
+									<?php echo $item->name; ?>
+								</a>
+							<?php else : ?>
+								<?php echo $item->name; ?>
+							<?php endif; ?>
 						</td>
 						<td>
 							<?php echo $item->distance; ?>
 						</td>
 						<td>
-							<?php echo $item->name; ?>
-						</td>
-						<td>
 							<?php echo $item->relaycount; ?>
 						</td>
-						<td>
-							<?php echo JText::_('COM_FREESTROKE_STROKE_'. $item->strokecode); ?>
-						</td>
 		
+						<td>
+							<?php echo $this->escape($item->code); ?>
+						</td>
+
 		                <?php if (isset($this->items[0]->id)) { ?>
 						<td class="center">
 							<?php echo (int) $item->id; ?>
@@ -181,7 +185,7 @@ $saveOrder	= $listOrder == 'a.ordering';
 				<?php echo JText::_( 'COM_FREESTROKE_SWIMSTYLES_IMPORT_INSTRUCTIONS' ) ?>
 				<table class="adminformlist">
 					<tr>
-						<td><label for="importfile"><?php echo JText::_( 'COM_FREESTROKE_FORM_LBL_SWIMSTYLES_IMPORTFILE' ).':'; ?></label></td>
+						<td><label for="importfile"><?php echo JText::_( 'COM_FREESTROKE_LABEL_SWIMSTYLES_IMPORTFILE' ).':'; ?></label></td>
 						<td>
 							<input type="file" id="importfile" accept=".csv,text/*" name="importfile" />
 						</td>

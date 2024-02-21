@@ -153,8 +153,8 @@ class FreestrokeLenexHelper  {
 	private function formatdatetime($thedate, $thetime) {
 		if ($thedate != '') {
 			$value = $thedate . " " . $thetime;
-			$date = strtotime ( $value );
-			$field = strftime ( '%Y-%m-%d %H:%M:00', $date );
+			$date = date_create( $value );
+			$field = date_format( $date, 'Y-m-d H:i:s') . ":00";
 		} else {
 			$field = null;
 		}
@@ -168,8 +168,8 @@ class FreestrokeLenexHelper  {
 	 */
 	private function formattime($value) {
 		if ($value != '') {
-			$time = strtotime ( $value );
-			$field = strftime ( '%H:%M', $time );
+			$time = date_create( $value );
+			$field = date_format( $time, 'H:i' );
 		} else {
 			$field = null;
 		}

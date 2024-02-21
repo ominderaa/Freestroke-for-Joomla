@@ -43,30 +43,14 @@ $document->addStyleSheet('components/com_freestroke/assets/css/freestroke.css');
     <div class="form-horizontal">
 		    <fieldset class="adminform">
             <legend><?php echo JText::_('COM_FREESTROKE_LEGEND_MEMBER'); ?></legend>
-
-                <?php echo $this->form->renderField('id'); ?>
+			<?php echo $this->form->renderField('id'); ?>
                 <?php echo $this->form->renderField('firstname'); ?>
-
 				<?php echo $this->form->renderField('lastname'); ?>
 				<?php echo $this->form->renderField('nameprefix'); ?>
-				<?php echo $this->form->renderField('initials'); ?>
 				<?php echo $this->form->renderField('birthdate'); ?>
 				<?php echo $this->form->renderField('gender'); ?>
-				
-				<?php echo $this->form->renderField('street'); ?>
-				<?php echo $this->form->renderField('zip'); ?>
-				<?php echo $this->form->renderField('place'); ?>
-
-				<?php echo $this->form->renderField('phonenumber'); ?>
-				<?php echo $this->form->renderField('mobile'); ?>
-				<?php echo $this->form->renderField('email'); ?>
-
-				<?php echo $this->form->renderField('entrydate'); ?>
-				<?php echo $this->form->renderField('exitdate'); ?>
-
+				<?php echo $this->form->renderField('registrationid'); ?>
 				<?php echo $this->form->renderField('isactive'); ?>
-				<?php echo $this->form->renderField('isjudge'); ?>
-				<?php echo $this->form->renderField('competence'); ?>
         </fieldset>
     </div>
 

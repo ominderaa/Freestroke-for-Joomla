@@ -51,9 +51,9 @@ if (!$canEdit && JFactory::getUser()->authorise('core.edit.own', 'com_freestroke
 				<td class="fs-label"><?php echo JText::_('COM_FREESTROKE_MEETS_DATES'); ?></td>
 				<td><?php
 				if ($this->item->maxdate && $this->item->maxdate != '0000-00-00' && $this->item->maxdate != $this->item->mindate) :
-				echo strftime('%d-%m-%Y', strtotime($this->item->mindate)) . " - " . strftime('%d-%m-%Y', strtotime($this->item->maxdate));
+				echo date_format(date_create($this->item->mindate), 'd-m-Y') . " - " . date_format(date_create($this->item->maxdate), 'd-m-Y');
 	 else :
-	 echo strftime('%d-%m-%Y', strtotime($this->item->mindate));
+		 echo date_format(date_create($this->item->mindate), 'd-m-Y');
 	endif;
 	?>
 				</td>

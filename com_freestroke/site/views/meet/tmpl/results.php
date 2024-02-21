@@ -23,7 +23,7 @@ if(isset($this->members) && count($this->members) > 0) {?>
 				echo $member->firstname . ' ' . $member->nameprefix . ' ' . $member->lastname;
 				?>
 		</td>
-		<td><?php echo strftime ( '%Y', strtotime ( $member->birthdate ) ) ?></td>
+		<td><?php echo date_format(date_create($member->birthdate), 'Y' ) ?></td>
 		<?php
 		$resultidx = 0; 
 		foreach ($member->results as $result ) { 

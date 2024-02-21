@@ -39,7 +39,7 @@ class FreestrokeTablemeet extends JTable {
 		$input = JFactory::getApplication()->input;
 		$task = $input->getString('task', '');
 
-		if ($array['id'] == 0)
+		if ($array['created_by'] == 0)
 		{
 			$array['created_by'] = JFactory::getUser()->id;
 		}

@@ -1,0 +1,246 @@
+/**
+ * @section clear
+ *
+ * clearing the float containers
+ */
+div#freestroke {
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+div.fs-sessionmessage {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	line-height: 2em;
+	border-top: 2px solid #8080FF;
+	border-bottom: 2px solid #8080FF;
+	background-color: #C0C0FF;
+}
+
+div#freestroke .clear
+{ border: 0; clear: both; float: none; height: 1px; line-height: 1px; }
+
+div#freestroke .floattext:after /* ie fix in coditional comments (html source) */
+{content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+
+div#freestroke .floattext
+{ 
+	display:block; /* safari */ 
+}
+
+td#freestroke-toolbar {
+	width: 			105px;	
+	/*float: 			right;*/
+	right:			5px;
+	/*position: 		absolute;*/
+}
+
+td#freestroke-toolbar div.fs-button {
+	display:			table;
+	margin: 			0px 0px 0px 10px;
+	width: 				100%;
+	float:				right;
+	
+	border: 			1px solid #3079ed;
+    background: 		#4d90fe;
+}
+
+td#freestroke-toolbar div.fs-innerbutton {
+	display:			table-cell;
+	text-align: 		center;
+	vertical-align:		middle;
+    height: 			32px;
+	color:				#dbdbdb;
+	padding:			0px 5px 0px 5px;
+}
+
+td#freestroke-toolbar a.fs-button {
+	display:			block;
+	border: 			1px solid #3079ed;
+    background: 		#4d90fe;
+	color:				#dbdbdb;
+	text-align:			center;
+	text-decoration: 	none;
+	height:				24px;
+	width:				100%;
+	line-height:		24px;
+	margin-top:			2px;
+	margin-bottom:		2px;
+}
+
+div#freestroke a.fs-button:hover {
+	color: #ffffff;
+	background-color: rgb(29, 77, 119);
+}
+
+/**
+ * Sessions, Entries and Results tables
+ *
+ */
+div#freestroke table.freestroketable
+{ 
+	margin: 1em 1px; 
+	width: 99%; 
+	font-size: 0.8em; 
+	line-height: 0.8em;
+	border-collapse: collapse; 
+	border: 1px solid #E5E5E5; 
+}
+
+div#freestroke table.freestroketable th
+{ 
+	background-color: #EFEFEF; 
+	color: #000; 
+	font-weight: bold; 
+	text-align: left; 
+	border-bottom: 1px solid #e5e5e5; 
+	border-right: 1px solid #E5E5E5;  
+}
+
+div#freestroke table.freestroketable th img
+{ 
+	margin: 0 0 5px 5px; 
+	vertical-align: middle; 
+	border: none; 
+}
+
+div#freestroke table.freestroketable td.fs-label {
+	font-size: 1em;
+	font-weight:bold;
+	line-height: 1em;
+}
+
+div#freestroke table.freestroketable td
+{ 
+	padding: 0.2em; 
+	border-bottom: 1px solid #e5e5e5; 
+	border-right: 1px solid #E5E5E5; 
+	vertical-align: top; 
+	background: #FFFFF; 
+}
+
+div#freestroke tr.fs-separator
+{ 
+	border-bottom: 1px solid #e5e5e5; 
+	border-right: 1px solid #E5E5E5; 
+	vertical-align: top; 
+	background: #FFFFF;
+	/*line-height: 1px;*/ 
+}
+
+div#freestroke table.inner-table {
+	margin: 0;
+	padding: 0;
+	border-spacing: 0;
+}
+
+div#freestroke td.cell-borders {
+	border-left: 1px solid #ebebeb;
+	border-right: 1px solid #ebebeb;
+}
+
+div#freestroke td.cell-reversed {
+	background: #ebebeb; 
+}
+
+div#freestroke table.freestroketable tr:hover td
+{ 
+	background: #F8F8F8;
+}
+
+div#freestroke table.freestrokecompacttable
+{ 
+	margin: 0px 0px 0px 0px; 
+	width: 99%; 
+	font-size: 0.8em; 
+	border-collapse: collapse; 
+}
+
+div#freestroke table.freestrokecompacttable th
+{ 
+	background-color: #EFEFEF; 
+	color: #000; 
+	font-weight: bold; 
+	text-align: left; 
+	border-bottom: 1px solid #e5e5e5; 
+}
+
+div#freestroke table.freestrokecompacttable td
+{ 
+	vertical-align: top; 
+	background: #FFFFF;
+	line-height: 1em; 
+}
+
+div#freestroke table.freestrokecompacttable td.fs-label {
+	font-weight:bold;
+	border-bottom: 1px solid #ebebeb;
+}
+
+div#freestroke table.freestrokecompacttable tr.fs-lastrow {
+	border-bottom: 1px solid #ebebeb;
+}
+
+div#freestroke table.fs-headertable td {
+	font-size: 0.9em;
+	margin: 0;
+}
+
+div#freestroke table.fs-headertable td.fs-label {
+	font-weight:bold;
+}
+
+div#freestroke-form td {
+	vertical-align: top;
+}
+
+div#freestroke .fs-fleft {
+	float: left;
+}
+
+div#freestroke .fs-fright {
+	float: right;
+}
+
+
+div#freestroke div.fs-delete-button {
+	width: 	16px;
+	height:	16px;
+	background-color: transparent;
+	background-image:url('../recycle_bin_empty.png');
+}
+
+div.freestroke-form td {
+	vertical-align:		top;
+}
+
+dl.fs-dl {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	clear: both;
+	overflow: hidden;
+	display: block; 
+	line-height: 2em;
+}
+
+dl.fs-dl dt {
+	margin: 0;
+	padding: 0;
+	float: left;
+	clear: left;
+	width: 16em;
+	font-size: 1em;
+	font-weight:bold;
+	border-bottom: 1px solid #ebebeb;
+}
+
+dl.fs-dl dd {
+	margin: 0;
+	padding: 0;
+	display: block;
+/*	float: right;
+	width: 55%;*/
+}
+

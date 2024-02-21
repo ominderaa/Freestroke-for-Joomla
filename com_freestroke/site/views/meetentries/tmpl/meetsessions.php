@@ -24,10 +24,10 @@ if(isset($this->meetsessions) && count($this->meetsessions) > 0) { ?>
 				<tr>
 					<td style="width: 10%;">
 						<span class="fs-label"><?php echo JText::_('COM_FREESTROKE_MEETS_SESSION_STARTDATE'); ?></span>
-						<div class="fs-lg-hidden fs-md-hidden"><?php echo strftime( '%d-%m-%Y', strtotime($meetsession->startdate) ); ?></div>
+						<div class="fs-lg-hidden fs-md-hidden"><?php echo date_format(date_create($meetsession->startdate), 'd-m-Y' ); ?></div>
 					</td>
 					<td class="fs-sm-hidden" style="width: 30%;">
-						<?php echo strftime( '%d-%m-%Y', strtotime($meetsession->startdate) ); ?>
+						<?php echo date_format(date_create($meetsession->startdate), 'd-m-Y'); ?>
 					</td>
 					<td style="width: 10%;">
 						<span class="fs-label"><?php echo JText::_('COM_FREESTROKE_MEETS_SESSION_WARMUPFROM'); ?></span>

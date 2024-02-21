@@ -4,8 +4,10 @@
 	<property name="component" value="com_freestroke" />
 	<property name="module" value="mod_freestrokecal" />
 	<property name="dist" value="dist" />
-	<property name="site" value="C:/www/dvstest" />
-	<property name="version" value="2.3.0" />
+
+	<!-- root of site on disk used for debugging -->
+	<property name="site" value="C:/dvs-dev/www" />
+	<property name="version" value="4.0.0" />
 
 	<target name="package" depends="package-component,package-module" />
 	<target name="copy-all" depends="copy-component,copy-module" />

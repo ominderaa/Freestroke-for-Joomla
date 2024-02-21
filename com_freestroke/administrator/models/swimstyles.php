@@ -62,7 +62,7 @@ class FreestrokeModelswimstyles extends JModelList {
 		$this->setState('filter.state', $published);
 		
 		// Filtering stroke
-		$this->setState('filter.strokecode', $app->getUserStateFromRequest($this->context . '.filter.strokecode', 'filter_strokecode', '', 'string'));
+		$this->setState('filter.strokecode', $app->getUserStateFromRequest($this->context . '.filter.strokecode', 'filter_strokecode', 'all', 'string'));
 		
 		// Load the parameters.
 		$params = JComponentHelper::getParams('com_freestroke');
@@ -119,7 +119,7 @@ class FreestrokeModelswimstyles extends JModelList {
 		
 		// Filtering stroke
 		$filter_strokecode = $this->state->get("filter.strokecode");
-		if ($filter_strokecode) {
+		if ($filter_strokecode && $filter_strokecode !== "all") {
 			$query->where("a.strokecode = '" . $db->escape($filter_strokecode) . "'");
 		}
 		

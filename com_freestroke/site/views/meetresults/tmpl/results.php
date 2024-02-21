@@ -26,7 +26,7 @@ require_once JPATH_COMPONENT . '/helpers/conversion.php';
 				echo $member->firstname . ' ' . $member->nameprefix . ' ' . $member->lastname;
 				?>
 		</td>
-		<td class="fs-sm-hidden fs-md-hidden"><?php echo strftime ( '%Y', strtotime ( $member->birthdate ) ) ?></td>
+		<td class="fs-sm-hidden fs-md-hidden"><?php echo date_format(date_create( $member->birthdate), 'Y' ) ?></td>
 		<?php
 		$resultidx = 0; 
 		foreach ($member->results as $result ) { 

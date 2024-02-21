@@ -25,7 +25,7 @@ if(isset($this->meetsessions) && count($this->meetsessions) > 0) { ?>
 		<table class="freestrokecompacttable" style="width:100%">
 			<tr>
 				<td class="fs-label"><?php echo JText::_('COM_FREESTROKE_MEETS_SESSION_STARTDATE'); ?></td>
-				<td><?php echo strftime('%d-%m-%Y', strtotime($meetsession->startdate)); ?></td>
+				<td><?php echo date_format(date_create($meetsession->startdate), 'd-m-Y'); ?></td>
 			</tr>
 			<tr>
 				<td class="fs-label"><?php echo JText::_('COM_FREESTROKE_MEETS_SESSION_STARTTIME'); ?></td>
